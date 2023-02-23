@@ -35,7 +35,7 @@ function Navbar() {
                 </div>
 
                 <div className='col-span-3 font-medium text-sm hidden xl:gap-14 2xl:gap-2 justify-between lg:flex xl:justify-end items-center'>
-                    <NavLink to='/favorite' className={`${Hover} relative`}>
+                    <NavLink to='/favorites' className={`${Hover} relative`}>
                         <span className='sm:text-xl font-semibold text-sm'>Favorite</span>
                         <div className='w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-3 -right-1'>
                             3
