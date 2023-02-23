@@ -5,7 +5,6 @@ export const addMovies = (data: any) => (dispatch: any) => {
 }
 
 export const filterMovie = (data: any) => (dispatch: any) => {
-    console.log('DataFilterAction', data)
     dispatch({
         type: FILTERMOVIE,
         params: data,

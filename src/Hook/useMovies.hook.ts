@@ -23,7 +23,6 @@ const useMovies = () => {
 
     const fetchMovieTopRated = useCallback(async () => {
         const movie = await (await getTopRated('movie')).films
-        console.log('MovieGet', movie)
         filterMovie(movie)
         addMovies(movie)
         setTopRatedMovie(movie)
