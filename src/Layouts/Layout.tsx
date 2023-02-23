@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import Footer from './Footer/Footer'
+import MobileFooter from './Footer/MobileFooter'
 import Navbar from './Navbar/Navbar'
 
 interface layout {
@@ -13,6 +14,7 @@ function Layout({ children }: layout) {
                 <Navbar />
                 {children}
                 <Footer />
+                <MobileFooter />
             </div>
         </>
     )

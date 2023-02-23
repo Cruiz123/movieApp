@@ -1,16 +1,18 @@
 import React from 'react'
-import Banner from '../ComponentsNew/Banner'
-import PopularMovies from '../ComponentsNew/PopularMovies'
-import SearchMovie from '../ComponentsNew/SearchMovie'
-import TopRated from '../ComponentsNew/TopRated'
+import Banner from '../Components/Banner'
+import PopularMovies from '../Components/PopularMovies'
+import SearchMovie from '../Components/SearchMovie'
+import TopRated from '../Components/TopRated'
+import { useMovies } from '../Hook'
 import Layout from '../Layouts/Layout'
 
 function HomeScreen() {
+    const { trendings } = useMovies()
     return (
         <>
             <Layout>
                 <div className='container mx-auto min-h-screen px-2 mb-6'>
-                    <Banner />
+                    <Banner trendings={trendings} />
                     <PopularMovies />
                     <TopRated />
                     <SearchMovie />

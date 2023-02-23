@@ -1,6 +1,5 @@
 import React from 'react'
-import { CgUser } from 'react-icons/cg'
-import { FaHeart, FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
 
 interface Hover {
@@ -12,7 +11,7 @@ function Navbar() {
     const Hover = ({ isActive }: Hover) => (isActive ? 'text-subMain' : hover)
     return (
         <div className='bg-main shadow-md sticky top-0 z-20'>
-            <div className='container mx-auto py-6 px-2 lg:grid gap-10 grid-cols-7 justify-between items-center '>
+            <div className='container mx-auto py-6 px-5 lg:grid gap-10 grid-cols-7 justify-between items-center '>
                 <div className='col-span-1 lg:block hidden'>
                     <Link to='/'>
                         <h1 className='sm:text-xl font-bold text-lg'>MovieApp</h1>
@@ -35,10 +34,10 @@ function Navbar() {
                     </form>
                 </div>
 
-                <div className='col-span-3 font-medium text-sm hidden xl:gap-14 2xl:gap-10 justify-between lg:flex xl:justify-end items-center'>
-                    <NavLink to='/tv' className={`${Hover} relative`}>
-                        <FaHeart className='w-6 h-6' />
-                        <div className='w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-5 -right-1'>
+                <div className='col-span-3 font-medium text-sm hidden xl:gap-14 2xl:gap-2 justify-between lg:flex xl:justify-end items-center'>
+                    <NavLink to='/favorite' className={`${Hover} relative`}>
+                        <span className='sm:text-xl font-semibold text-sm'>Favorite</span>
+                        <div className='w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-3 -right-1'>
                             3
                         </div>
                     </NavLink>

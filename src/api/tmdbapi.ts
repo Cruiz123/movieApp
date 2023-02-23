@@ -96,7 +96,6 @@ export const getGenres = async (mediaType: MediaType):Promise<Genre[]> => {
     id: number
   ): Promise<null | Film> => {
     try {
-        console.log('Petition',mediaType, id)
       const { data } = await axiosClient.get(`/${mediaType}/${id}`)
       return formatResult(data, mediaType)
     } catch (error) {

@@ -1,7 +1,8 @@
-import { ADDMOVIE, DELETEMOVIE } from '../actions/actionsTypes'
+import { ADDMOVIE, DELETEMOVIE, FILTERMOVIE } from '../actions/actionsTypes'
 
 const initialState = {
     movies: [],
+    movieFilter: [],
 }
 
 export default (state = initialState, action: any) => {
@@ -11,6 +12,12 @@ export default (state = initialState, action: any) => {
                 ...state,
                 movies: action.payload.movies,
             }
+        case FILTERMOVIE: {
+            return {
+                ...state,
+                movieFilter: action.payload,
+            }
+        }
         case DELETEMOVIE:
             return {
                 state,

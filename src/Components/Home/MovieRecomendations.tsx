@@ -46,7 +46,7 @@ function MovieRecomendations({ info }: Recomendation) {
                                     <img
                                         src={tmdbImageSrc(film.posterPath)}
                                         alt={film.title}
-                                        className='w-full h-full object-cover rounded-xl'
+                                        className='w-full h-full object-center rounded-xl'
                                     />
                                 </Link>
                                 <div className='absolute flex-btn gap-2 bottom-0 right-0 left-0 bg-main bg-opacity-60 text-white px-4 py-3'>

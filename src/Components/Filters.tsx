@@ -9,30 +9,19 @@ interface Filter {
 }
 
 function Filters({ gen, filterMovie }: Filter) {
-    const [select, setSelected] = useState('')
-
-    // const selectFilterOption = useCallback(() => {
-    //     setFilterGenres(select)
-    // }, [select, setFilterGenres])
-
-    // React.useEffect(() => {
-    //     selectFilterOption()
-    // }, [selectFilterOption])
+    const [select, setSelected] = useState('All')
 
     return (
         <div className='my-6 bg-dry border text-dryGray border-gray-800 w-[22rem]'>
             <Listbox
-                value={gen}
+                value={select}
                 onChange={(prev: any) => {
-                    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                     filterMovie(prev.id)
                     setSelected(prev.name)
                 }}>
                 <div className='relative'>
                     <Listbox.Button className='relative w-[22rem] border border-gray-800 text-white bg-main rounded-md shadow-sm cursor-default py-4 pl-6 pr-10 text-left text-md'>
-                        <span className='block truncate'>
-                            {select !== '' ? select : 'All'}
-                        </span>
+                        <span className='block truncate'>{select}</span>
                         <span className='absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
                             <CgSelect className='w-5 h-5' aria-hidden='true' />
                         </span>

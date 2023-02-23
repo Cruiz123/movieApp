@@ -45,7 +45,7 @@ function MovieCasts({ info }: Casts) {
                                 <img
                                     src={tmdbImageSrc(cast.profilePath)}
                                     alt={cast.name}
-                                    className='w-full h-64 object-cover rounded mb-4 '
+                                    className='w-full h-64 object-center rounded mb-4 '
                                 />
                                 <p className='font-semibold'>{cast.name}</p>
                                 <p className='opacity-[0.9] text-sm'>

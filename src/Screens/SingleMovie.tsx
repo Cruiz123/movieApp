@@ -1,10 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import { getDetail, getCasts, getRecommendations } from '../api/tmdbapi'
-import MovieCasts from '../ComponentsNew/Home/MovieCasts'
-import MovieInfo from '../ComponentsNew/Home/MovieInfo'
-// import MovieRates from '../ComponentsNew/Home/MovieRates'
-import MovieRecomendations from '../ComponentsNew/Home/MovieRecomendations'
+import MovieCasts from '../Components/Home/MovieCasts'
+import MovieInfo from '../Components/Home/MovieInfo'
+import MovieRecomendations from '../Components/Home/MovieRecomendations'
 import { Cast, Film as FilmInterface } from '../interfaces/interface'
 import Layout from '../Layouts/Layout'
 
@@ -60,7 +59,7 @@ function SingleMovie() {
     return (
         <Layout>
             {
-                film !== null && film !== undefined &&
+                film &&
             <MovieInfo posterPath={film.posterPath} title={film.title} description={film.description} release_date={film.release_date} />
             }
             <div className="container mx-auto min-h-screen px-2 my-6">

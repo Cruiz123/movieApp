@@ -30,7 +30,7 @@ function MovieInfo({ title, description, posterPath, release_date }: detailsMovi
                         <img
                             src={tmdbImageSrc(posterPath)}
                             alt={title}
-                            className='w-full h-full object-cover'
+                            className='w-full h-full object-center'
                         />
                     </div>
                     <div className='col-span-2 md:grid grid-cols-5 gap-4 items-center'>

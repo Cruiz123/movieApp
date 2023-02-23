@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-// import { Film } from '../interfaces/interface'
 
 interface Props {
     release_date: string;

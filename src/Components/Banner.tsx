@@ -1,29 +1,16 @@
 import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import { useQuery } from '@apollo/client'
-// import { BANNER_MOVIES } from '../GraphQl/movie'
 import { tmdbImageSrc } from '../utils/funtionsUtils'
 import FlexMovieItems from './FlexMovieItems'
 import { Link } from 'react-router-dom'
 import { FaHeart } from 'react-icons/fa'
-import { useEffect, useState } from 'react'
 import { Film } from '../interfaces/interface'
-import { getTrendings } from '../api/tmdbapi'
 
-function Banner() {
-    const [trendings, setTrendings] = useState<Film[]>([])
+interface BannerProps {
+    trendings: Film[];
+}
 
-    const fetchTrending = async () => {
-        const movies = await getTrendings('movie')
-
-        setTrendings(movies)
-    }
-    // const { data, error, loading } = useQuery(BANNER_MOVIES, { variables: { language: 'en-Us' } })
-
-    useEffect(() => {
-        fetchTrending()
-    }, [])
-
+function Banner({ trendings }: BannerProps) {
     return (
         <div className='relative w-full'>
             <Swiper
